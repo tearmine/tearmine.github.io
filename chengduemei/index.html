@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成都峨眉山大酒店-峨眉山风景区精品商务酒店预订平台</title>
+    <meta name="description" content="成都峨眉山大酒店位于峨眉山景区核心地带，提供便捷的登山起点服务。酒店拥有各类舒适客房，配备商务中心、中西餐厅及会议设施，是游客游览峨眉山金顶、报国寺的理想下榻之所。">
+    <meta name="keywords" content="成都峨眉山大酒店, 峨眉山酒店, 峨眉山住宿, 峨眉山风景区酒店, 峨眉山商务酒店">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --primary-light: #D2691E;
+            --secondary-color: #F5F5DC;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --white: #ffffff;
+            --bg-light: #f9f9f9;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 1rem;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-light);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-reserve {
+            background-color: var(--primary-light);
+            color: var(--white);
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-reserve:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-contact {
+            color: var(--primary-color);
+            font-weight: 600;
+            border: 1px solid var(--primary-color);
+            padding: 7px 20px;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .btn-contact:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 550px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/emeyanhotel/1600/900.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .hero-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Quick Info Bar */
+        .quick-info {
+            background-color: var(--white);
+            margin-top: -40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .info-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .info-text p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* About Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-light);
+            margin: 10px auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--primary-light);
+            font-weight: bold;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Rooms Section */
+        .rooms-section {
+            background-color: var(--white);
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .room-card {
+            background-color: var(--white);
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .room-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .room-img {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .room-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .room-card:hover .room-img img {
+            transform: scale(1.05);
+        }
+
+        .room-info {
+            padding: 25px;
+        }
+
+        .room-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .room-price {
+            color: var(--primary-light);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .room-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .room-features {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .room-features span {
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .btn-room {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .btn-room:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Amenities */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .amenity-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .amenity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .amenity-item h4 {
+            margin-bottom: 10px;
+        }
+
+        .amenity-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Location/Map Placeholder */
+        .location-section {
+            background-color: var(--white);
+        }
+
+        .location-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .map-placeholder {
+            height: 100%;
+            min-height: 400px;
+            background-color: #e0e0e0;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            backdrop-filter: blur(2px);
+        }
+
+        .location-info h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .info-row {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            min-width: 80px;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid, .location-container, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-info {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile demo */
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            .header-main .container {
+                justify-content: center;
+            }
+            
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <span>峨眉山风景区 · 24小时服务热线：0833-5522 111</span>
+                <span>营业时间：08:00 - 次日 06:00</span>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="logo">
+                    成都峨眉山大酒店
+                    <span>CHENGDU EMESI MOUNTAIN HOTEL</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">首页</a></li>
+                        <li><a href="#about">酒店概况</a></li>
+                        <li><a href="#rooms">客房预订</a></li>
+                        <li><a href="#amenities">设施服务</a></li>
+                        <li><a href="#location">交通指南</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="btn-contact">在线预订</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>尊享峨眉山核心度假体验</h1>
+            <p>毗邻报国寺景区，交通便利，是您朝圣峨眉金顶、休闲度假的理想下榻之所</p>
+            <div class="hero-tags">
+                <span class="hero-tag">星级标准</span>
+                <span class="hero-tag">生态园林</span>
+                <span class="hero-tag">商务会议</span>
+            </div>
+            <a href="#rooms" class="btn-reserve">查看房型与价格</a>
+        </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <div class="container">
+        <div class="quick-info">
+            <div class="info-item">
+                <div class="info-icon">🚗</div>
+                <div class="info-text">
+                    <h3>交通便利</h3>
+                    <p>距峨眉山高铁站仅15分钟车程</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">⛰️</div>
+                <div class="info-text">
+                    <h3>登山起点</h3>
+                    <p>报国寺景区核心位置，徒步起点</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🍽️</div>
+                <div class="info-text">
+                    <h3>餐饮服务</h3>
+                    <p>特色川菜与地道素食餐厅</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🛎️</div>
+                <div class="info-text">
+                    <h3>贴心服务</h3>
+                    <p>免费接站服务（需提前预约）</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>酒店简介</h3>
+                    <p>成都峨眉山大酒店坐落于风景秀丽的峨眉山风景区内，是一家集商务、会议、度假、旅游接待为一体的综合性酒店。酒店环境清幽，建筑风格融合了传统川西民居与现代舒适元素，为宾客提供宁静的休憩空间。</p>
+                    <p>酒店拥有完善的会议设施和多功能厅，是举办商务会议、学术研讨及团队建设的理想场所。同时，我们致力于为游客提供一站式服务，从登山向导咨询到本地特产推荐，力求让每一位客人感受到家一般的温暖。</p>
+                    <ul class="feature-list">
+                        <li>峨眉山景区内高星级住宿体验</li>
+                        <li>专业导游咨询与行程规划服务</li>
+                        <li>拥有独立生态停车场，车位充足</li>
+                        <li>24小时前台接待与安保服务</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/emeyanhotelroom/600/400.jpg" alt="成都峨眉山大酒店客房内部环境">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section rooms-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>精选客房</h2>
+                <p>舒适睡眠与便捷设施，为您打造旅途中的温馨港湾</p>
+            </div>
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <article class="room-card">
+                    <div class="room-img">
+                        <img src="https://picsum.photos/seed/emeyanbed/400/300.jpg" alt="豪华大床房">
+                    </div>
+                    <div class="room-info">
+                        <div class="room-title">
+                            <h3>豪华大床房</h3>
+                            <span class="room-price">¥388起</span>
+                        </div>
+                        <p class="room-desc">宽敞明亮的房间，配备高品质床品，适合情侣及商务人士入住。</p>
+                        <div class="room-features">
+                            <span>免费WiFi</span>
+                            <span>独立卫浴</span>
+                            <span>24小时热水</span>
+                        </div>
+                        <a href="#" class="btn-room">预订此房型</a>
+                    </div>
+                </article>
+
+                <!-- Room 2 -->
+                <article class="room-card">
+                    <div class="room-img">
+                        <img src="https://picsum.photos/seed/emeyanfamily/400/300.jpg" alt="家庭房">
+                    </div>
+                    <div class="room-info">
+                        <div class="room-title">
+                            <h3>家庭房</h3>
+                            <span class="room-price">¥528起</span>
+                        </div>
+                        <p class="room-desc">两室一厅设计，拥有两张单人床，配备儿童洗漱用品，温馨家庭首选。</p>
+                        <div class="room-features">
+                            <span>两室一厅</span>
+                            <span>冰箱</span>
+                            <span>观景阳台</span>
+                        </div>
+                        <a href="#" class="btn-room">预订此房型</a>
+                    </div>
+                </article>
+
+                <!-- Room 3 -->
+                <article class="room-card">
+                    <div class="room-img">
+                        <img src="https://picsum.photos/seed/emeyansuite/400/300.jpg" alt="行政套房">
+                    </div>
+                    <div class="room-info">
+                        <div class="room-title">
+                            <h3>行政套房</h3>
+                            <span class="room-price">¥888起</span>
+                        </div>
+                        <p class="room-desc">尊贵套房，拥有独立会客区与休息区，视野开阔，尽享峨眉山自然风光。</p>
+                        <div class="room-features">
+                            <span>行政酒廊</span>
+                            <span>迷你吧</span>
+                            <span>独立办公区</span>
+                        </div>
+                        <a href="#" class="btn-room">预订此房型</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>完善设施</h2>
+                <p>一站式服务配套，满足您的商务与休闲需求</p>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <span class="amenity-icon">🥘</span>
+                    <h4>特色餐饮</h4>
+                    <p>川味特色菜、峨眉素斋</p>
+                </div>
+                <div class="amenity-item">
+                    <span class="amenity-icon">🚿</span>
+                    <h4>洗浴服务</h4>
+                    <p>免费洗漱用品、浴袍拖鞋</p>
+                </div>
+                <div class="amenity-item">
+                    <span class="amenity-icon">🚌</span>
+                    <h4>旅游咨询</h4>
+                    <p>提供峨眉山景点门票预订</p>
+                </div>
+                <div class="amenity-item">
+                    <span class="amenity-icon">🚗</span>
+                    <h4>停车场</h4>
+                    <p>免费大型生态停车场</p>
+                </div>
+                <div class="amenity-item">
+                    <span class="amenity-icon">🎤</span>
+                    <h4>会议中心</h4>
+                    <p>可容纳200人的多功能厅</p>
+                </div>
+                <div class="amenity-item">
+                    <span class="amenity-icon">📶</span>
+                    <h4>网络服务</h4>
+                    <p>公共区域高速WiFi覆盖</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="section location-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>地理位置</h2>
+                <p>位于峨眉山旅游黄金线，交通便捷，四通八达</p>
+            </div>
+            <div class="location-container">
+                <div class="map-placeholder">
+                    <img src="https://picsum.photos/seed/emeyanmap/800/600.jpg" alt="峨眉山地图">
+                    <div class="map-overlay">
+                        📍 酒店位置示意图
+                    </div>
+                </div>
+                <div class="location-info">
+                    <h3>交通指南</h3>
+                    <div class="info-row">
+                        <span class="info-label">地址：</span>
+                        <span>四川省乐山市峨眉山市报国镇景区路1号</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">自驾：</span>
+                        <span>导航设置“成都峨眉山大酒店”，距成都市区约150公里，车程约2小时。</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">高铁：</span>
+                        <span>乘坐成绵乐高铁至“峨眉山站”，出站后打车约15分钟即可到达酒店。</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">公交：</span>
+                        <span>市内可乘坐旅游专线或6路公交车至“报国寺”站下车，步行即达。</span>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="#" class="btn-reserve" style="display: inline-block;">一键导航至酒店</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>成都峨眉山大酒店</h4>
+                    <p>我们致力于为每一位来到峨眉山的客人提供最舒适、最便捷的住宿体验。无论您是虔诚的朝圣者，还是寻求休闲的旅行者，这里都是您的理想之家。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">酒店概况</a></li>
+                        <li><a href="#rooms">客房预订</a></li>
+                        <li><a href="#amenities">设施服务</a></li>
+                        <li><a href="#location">交通指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>预订服务</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">电话预订</a></li>
+                        <li><a href="#">在线咨询</a></li>
+                        <li><a href="#">会员优惠</a></li>
+                        <li><a href="#">退改政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="footer-links">
+                        <li>电话：0833-55221111</li>
+                        <li>传真：0833-55221122</li>
+                        <li>邮箱：info@emeyanhotel.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 成都峨眉山大酒店 版权所有 | 蜀ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                                                                  </html>
