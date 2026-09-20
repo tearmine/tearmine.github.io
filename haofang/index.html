@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="号房网 - 深度解析中国古代号房制度，从古代办公场所演变到现代办公文化。提供号房历史考据、办公环境设计、古代公文流转及历史人物在号房中的故事。">
+    <meta name="keywords" content="号房,古代办公场所,号房制度,古代办公环境,历史考据,办公文化,古代公文">
+    <title>号房-古代办公场所制度演变与历史考据</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f9f7f2;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.7)), 
+                        url('https://picsum.photos/seed/officehistory/1600/900') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* History Cards */
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .history-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .history-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 0.8rem;
+        }
+
+        /* Structure Detail */
+        .structure-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .structure-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .structure-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .feature-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.2rem;
+        }
+
+        .structure-visual {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+        }
+
+        .visual-diagram {
+            width: 100%;
+            height: auto;
+            border: 2px dashed var(--border-color);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fafafa;
+            color: var(--text-secondary);
+            font-weight: bold;
+            min-height: 300px;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            background: #fff;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-secondary);
+            background-color: #fcfcfc;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px; /* Arbitrary large height */
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 1rem;
+                gap: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .structure-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>号</span>房网
+        </a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#history">历史演变</a></li>
+                <li><a href="#structure">制度解析</a></li>
+                <li><a href="#culture">办公文化</a></li>
+                <li><a href="#faq">常见问答</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探寻古代办公场所的智慧</h1>
+            <p>号房不仅是古代官署的物理空间，更是明清时期行政运转的核心枢纽。深入了解其建筑规制、人员配置与历史价值。</p>
+            <a href="#history" class="btn">开始探索</a>
+        </div>
+    </section>
+
+    <section id="history" class="container">
+        <div class="section-header">
+            <h2>历史演变与功能</h2>
+            <p>从汉唐的官署到明清的号房，办公场所的形态随着政治体制的完善而发生了深刻变化。</p>
+        </div>
+        <div class="history-grid">
+            <article class="history-card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/seed/office1/400/300" alt="古代官署建筑示意图">
+                </div>
+                <div class="card-content">
+                    <span class="card-date">起源：汉唐官署</span>
+                    <h3>早期行政中枢</h3>
+                    <p>在纸张普及之前，古代办公场所多位于官署主殿或专门的书案区。此时的“号房”概念更多指代具体的办公席位或档案存储处。</p>
+                    <a href="#" class="read-more">阅读详情</a>
+                </div>
+            </article>
+            <article class="history-card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/seed/office2/400/300" alt="明清办公环境">
+                </div>
+                <div class="card-content">
+                    <span class="card-date">鼎盛：明清内阁</span>
+                    <h3>内阁大本营</h3>
+                    <p>明代内阁与清代军机处设立后，形成了专用的“号房”。这是处理奏折、起草诏书的核心场所，空间布局严谨，等级森严。</p>
+                    <a href="#" class="read-more">阅读详情</a>
+                </div>
+            </article>
+            <article class="history-card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/seed/office3/400/300" alt="现代办公文化">
+                </div>
+                <div class="card-content">
+                    <span class="card-date">传承：现代办公</span>
+                    <h3>从号房到办公室</h3>
+                    <p>号房制度中的条案、文房四宝以及严谨的办事流程，深刻影响了现代机关办公与企业管理文化的形成。</p>
+                    <a href="#" class="read-more">阅读详情</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="structure" class="container">
+        <div class="structure-layout">
+            <div class="structure-text">
+                <h3>号房的规制与布局</h3>
+                <p>号房的设计并非随意为之，而是为了适应高强度的公文处理需求。其核心特征在于“条理分明”与“静肃有序”。</p>
+                <ul class="feature-list">
+                    <li><strong>条案与书格：</strong>号房内设有长条形办公桌（条案），用于铺展奏折与书写；两侧或后方设有书格，用于存放档案与书籍。</li>
+                    <li><strong>环境静肃：</strong>为了防止泄密与干扰，号房通常位于官署深处的偏殿或独立院落，要求绝对安静。</li>
+                    <li><strong>人员配置：</strong>除首辅或军机大臣外，通常配有誊录官（抄写员）和书吏，形成流水线式的办公作业。</li>
+                </ul>
+                <br>
+                <a href="#" class="btn">查看详细考据</a>
+            </div>
+            <div class="structure-visual">
+                <div class="visual-diagram">
+                    [ 号房平面示意图 ]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="culture" class="container">
+        <div class="section-header">
+            <h2>号房文化与轶事</h2>
+            <p>在漫长的历史长河中，号房见证了无数国家大事的诞生，也记录了文官们的喜怒哀乐。</p>
+        </div>
+        <div class="history-grid">
+            <article class="history-card">
+                <div class="card-content">
+                    <h3>通宵达旦的誊录</h3>
+                    <p>每逢大典或紧急军情，号房内的誊录官往往需要通宵工作。深夜的烛光与墨香，是号房最真实的写照。</p>
+                </div>
+            </article>
+            <article class="history-card">
+                <div class="card-content">
+                    <h3>奏折的流转</h3>
+                    <p>从地方督抚呈递的奏折，到中央的票拟与批红，号房是信息流转的唯一高速通道，容不得半点差错。</p>
+                </div>
+            </article>
+            <article class="history-card">
+                <div class="card-content">
+                    <h3>严谨的礼仪</h3>
+                    <p>进入号房需严格行礼，且不得随意喧哗。这种环境造就了古代官僚体系中独特的职业操守与纪律意识。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="faq" class="container">
+        <div class="section-header">
+            <h2>常见问答</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">什么是号房？</div>
+                <div class="faq-answer">
+                    <p>号房是古代官署中用于办公、处理文书和存放档案的专用场所。在明清时期，内阁和军机处设有专门的“号房”，是政治中枢的办公地点。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">号房与普通书房有什么区别？</div>
+                <div class="faq-answer">
+                    <p>号房不仅用于阅读和写作，更强调“办公”功能，具备处理公文、存放档案、接待官员等行政属性，环境要求比私人书房更加严肃、静肃。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">古代官员在号房是如何工作的？</div>
+                <div class="faq-answer">
+                    <p>官员在号房主要进行“票拟”或“批红”工作，即阅读各地呈递的奏折并拟定处理意见。此外，还需监督书吏誊录文书，确保公文准确无误。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于号房网</h4>
+                <p>致力于还原历史细节，传播古代办公文化与建筑知识。本站内容仅供考据与参考，不构成任何历史结论。</p>
+            </div>
+            <div class="footer-col">
+                <h4>栏目导航</h4>
+                <ul>
+                    <li><a href="#history">历史演变</a></li>
+                    <li><a href="#structure">制度解析</a></li>
+                    <li><a href="#culture">文化轶事</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">古代建筑图录</a></li>
+                    <li><a href="#">官制通考</a></li>
+                    <li><a href="#">历史档案库</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 号房网保留所有权利. 仅供学习参考.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('#nav-menu');
+
+    menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show');
+        });
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
