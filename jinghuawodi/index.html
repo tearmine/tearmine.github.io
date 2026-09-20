@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="警花卧底专题页 - 深度解析卧底题材影视作品与小说，推荐热门警匪剧、刑侦小说及经典角色，提供剧情介绍、角色分析及观看指南。">
+    <meta name="keywords" content="警花卧底,警匪剧,刑侦小说,悬疑推理,影视推荐,角色分析">
+    <title>警花卧底-悬疑影视与刑侦小说深度解读平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a2a3a;
+            --accent-color: #c0392b;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        .view-all {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .view-all:hover {
+            color: var(--accent-color);
+        }
+
+        /* Featured Grid */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .main-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            height: 400px;
+        }
+
+        .main-card img {
+            width: 55%;
+            object-fit: cover;
+        }
+
+        .main-card-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .main-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .main-card p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-size: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+        }
+
+        .side-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .side-item {
+            background: var(--white);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .side-item img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .side-item-content h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .side-item-content p {
+            font-size: 13px;
+            color: var(--text-gray);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* Character Analysis */
+        .character-section {
+            background-color: var(--white);
+        }
+
+        .char-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .char-card {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .char-card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .char-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            border: 3px solid #eee;
+        }
+
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .char-card h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .char-card p {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .guide-section .section-title {
+            color: var(--white);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .guide-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .guide-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .guide-item p {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #999;
+            padding: 60px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h5 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+            .content-grid, .char-container, .guide-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .main-card {
+                height: auto;
+                flex-direction: column;
+            }
+            .main-card img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+            .header-inner {
+                padding: 0 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .content-grid, .char-container, .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>警</span>花卧底网
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">影视推荐</a></li>
+                    <li><a href="#">小说连载</a></li>
+                    <li><a href="#">角色档案</a></li>
+                    <li><a href="#">深度解析</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="search-btn">搜索作品</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>在黑暗中绽放的正义之光</h1>
+            <p>汇聚警花卧底题材影视与小说，深度剖析“潜伏”背后的心理博弈、人性考验与精彩剧情。</p>
+            <div class="hero-tags">
+                <span class="tag">刑侦悬疑</span>
+                <span class="tag">职场励志</span>
+                <span class="tag">女性视角</span>
+                <span class="tag">经典重映</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">本周重磅推荐</h2>
+                <a href="#" class="view-all">查看全部 &rarr;</a>
+            </div>
+            <div class="featured-grid">
+                <article class="main-card">
+                    <img src="https://picsum.photos/seed/police1/600/400" alt="卧底警官海报">
+                    <div class="main-card-content">
+                        <span class="tag" style="margin-bottom: 10px; display:inline-block;">年度高分剧</span>
+                        <h3>《暗夜微光》：警花卧底行动全记录</h3>
+                        <p>本剧讲述了女警林婉为了侦破特大跨国洗钱案，化名潜入犯罪集团内部的故事。在刀尖上跳舞的岁月里，她不仅要面对狡猾的犯罪头目，还要时刻提防身份暴露。本站为您带来独家剧情解析与角色心理分析。</p>
+                        <div class="meta-info">
+                            <span>⏱ 45集</span>
+                            <span>⭐ 9.2分</span>
+                            <span>🔍 刑侦/动作</span>
+                        </div>
+                    </div>
+                </article>
+                <div class="side-list">
+                    <div class="side-item">
+                        <img src="https://picsum.photos/seed/police2/100/150" alt="小说封面">
+                        <div class="side-item-content">
+                            <h4>《红妆警探》连载中</h4>
+                            <p>资深卧底女警重返警队，破解连环失踪案...</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img src="https://picsum.photos/seed/police3/100/150" alt="电影海报">
+                        <div class="side-item-content">
+                            <h4>《破晓行动》经典重映</h4>
+                            <p>年度最佳警匪片，还原真实卧底生活...</p>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <img src="https://picsum.photos/seed/police4/100/150" alt="纪录片封面">
+                        <div class="side-item-content">
+                            <h4>《一线特警》幕后揭秘</h4>
+                            <p>走进真实卧底警察的世界，了解他们的艰辛...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">精选文章</h2>
+                <a href="#" class="view-all">阅读更多 &rarr;</a>
+            </div>
+            <div class="content-grid">
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/law/400/300" alt="法律与道德">
+                        <span class="card-badge">深度解析</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>卧底行动中的法律边界</h3>
+                        <p>深入探讨在卧底侦查过程中，警察如何平衡法律程序与破案效率，以及在特殊情境下的道德抉择。</p>
+                        <div class="card-footer">
+                            <span>2023-10-24</span>
+                            <span>2,340 阅读</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/drama/400/300" alt="演技派">
+                        <span class="card-badge">影评</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>如何演绎好“警花卧底”角色？</h3>
+                        <p>分析多部热播剧中优秀女警形象塑造，从眼神、肢体语言到心理素质的全方位解读。</p>
+                        <div class="card-footer">
+                            <span>2023-10-22</span>
+                            <span>1,890 阅读</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/society/400/300" alt="社会观察">
+                        <span class="card-badge">社会观察</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>女性在刑侦领域的独特优势</h3>
+                        <p>探讨女性警察在卧底、审讯及社区走访工作中展现出的细腻与坚韧。</p>
+                        <div class="card-footer">
+                            <span>2023-10-20</span>
+                            <span>3,105 阅读</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Character Analysis -->
+        <section class="character-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">经典角色档案</h2>
+                    <a href="#" class="view-all">查看全图鉴 &rarr;</a>
+                </div>
+                <div class="char-container">
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/char1/150/150" alt="角色头像">
+                        </div>
+                        <h4>沈蓝</h4>
+                        <p>《迷雾追踪》主角</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/char2/150/150" alt="角色头像">
+                        </div>
+                        <h4>安雅</h4>
+                        <p>《暗夜微光》反派</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/char3/150/150" alt="角色头像">
+                        </div>
+                        <h4>苏青</h4>
+                        <p>《红妆警探》主角</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/char4/150/150" alt="角色头像">
+                        </div>
+                        <h4>陈若曦</h4>
+                        <p>《破晓行动》配角</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide/FAQ Section -->
+        <section class="container guide-section">
+            <div class="section-header">
+                <h2 class="section-title">观看与阅读指南</h2>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <h3>如何选择优质卧底题材作品？</h3>
+                    <p>关注剧情逻辑是否严密、人物动机是否合理、以及是否真实还原了警匪博弈的紧张氛围。优秀的作品往往在细节处见真章。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>警惕虚假信息与网络谣言</h3>
+                    <p>网络上关于真实警花卧底的故事多为艺术加工。请勿轻信未经证实的网络传言，本站所有内容均基于公开影视资料与文学创作。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>常见问题解答 (FAQ)</h3>
+                    <p><strong>Q：现实中真的有女警卧底吗？</strong><br>A：是的，女性警察在特定侦查任务中常扮演卧底角色，利用其特殊的身份优势获取情报。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">警花卧底网</div>
+                    <p>致力于为广大影视爱好者和文学读者提供最优质的警匪题材内容聚合与深度解析服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>内容栏目</h5>
+                    <ul>
+                        <li><a href="#">影视推荐</a></li>
+                        <li><a href="#">小说连载</a></li>
+                        <li><a href="#">角色分析</a></li>
+                        <li><a href="#">影评榜单</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>帮助中心</h5>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>关注我们</h5>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">豆瓣小组</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 警花卧底网 版权所有 | 仅供学习与交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
