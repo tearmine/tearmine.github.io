@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲍鱼图片 - 高清珍馐图鉴与烹饪欣赏</title>
+    <meta name="description" content="鲍鱼图片大全，提供各类鲍鱼品种的高清实拍图、形态结构图及烹饪摆盘图片。包含网鲍、吉品鲍、窝麻鲍等常见品种展示，适合美食摄影参考与烹饪学习。">
+    <meta name="keywords" content="鲍鱼图片,海鲜摄影,鲍鱼品种,鲍鱼摆盘,海鲜图鉴,鲍鱼烹饪">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/abalone_hero/1600/600') no-repeat center center/cover;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 2rem;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            height: fit-content;
+        }
+
+        aside h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-list a {
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .category-list a:hover {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        .category-list a span {
+            margin-right: 0.5rem;
+        }
+
+        /* Content Area */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .intro-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .intro-section p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .image-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .image-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .image-wrapper {
+            position: relative;
+            padding-top: 75%; /* 4:3 Aspect Ratio */
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .image-card:hover .image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            color: #666;
+        }
+
+        /* Info List */
+        .info-list {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .info-list h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.8rem;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            width: 100px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                display: none; /* Simplify for mobile */
+            }
+
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 14a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"></path>
+                </svg>
+                <span>珍鲜图库</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">鲍鱼品种</a></li>
+                    <li><a href="#">海鲜摆盘</a></li>
+                    <li><a href="#">烹饪图解</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>鲍鱼图片</h1>
+        <p>探索海洋珍馐的高清视觉盛宴，从形态结构到烹饪艺术，全面收录鲍鱼图片资源。</p>
+    </section>
+
+    <div class="container">
+        <aside>
+            <h3>浏览分类</h3>
+            <ul class="category-list">
+                <li><a href="#"><span>🌊</span> 按品种浏览</a></li>
+                <li><a href="#"><span>🥘</span> 摆盘设计</a></li>
+                <li><a href="#"><span>🔪</span> 切片展示</a></li>
+                <li><a href="#"><span>🌿</span> 烹饪过程</a></li>
+                <li><a href="#"><span>📸</span> 美食摄影</a></li>
+            </ul>
+            
+            <h3 style="margin-top: 2rem;">热门标签</h3>
+            <ul class="category-list">
+                <li><a href="#">网鲍</a></li>
+                <li><a href="#">吉品鲍</a></li>
+                <li><a href="#">窝麻鲍</a></li>
+                <li><a href="#">红烧鲍鱼</a></li>
+                <li><a href="#">清蒸鲍鱼</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <section class="intro-section">
+                <h2>什么是鲍鱼？</h2>
+                <p>鲍鱼，又名“鲍螺”，属于软体动物门腹足纲，是世界著名的海产食用贝类。它肉质细嫩，营养丰富，被誉为“海味之冠”。本图集旨在通过高清图片展示鲍鱼的自然形态、不同品种的区别以及烹饪后的精美风貌，为美食爱好者提供直观的视觉参考。</p>
+            </section>
+
+            <section class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/abalone1/400/300" alt="网鲍高清图片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">网鲍图片展示</h3>
+                        <p class="card-desc">网鲍体型较大，边缘呈黑色，背面有深陷的方格状花纹，纹理如网，故称网鲍。</p>
+                        <span class="card-tag">品种图鉴</span>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/abalone2/400/300" alt="吉品鲍图片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">吉品鲍图片展示</h3>
+                        <p class="card-desc">吉品鲍呈元宝形，尾部较尖，切面呈金黄色，肉质肥美，是高级宴席常见食材。</p>
+                        <span class="card-tag">形态结构</span>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/abalone3/400/300" alt="窝麻鲍图片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">窝麻鲍图片展示</h3>
+                        <p class="card-desc">窝麻鲍体型较小，壳面有颗粒状突起，形状不规则，口感鲜甜，略带韧性。</p>
+                        <span class="card-tag">品种图鉴</span>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/abalone4/400/300" alt="鲍鱼摆盘图片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">鲍鱼摆盘艺术</h3>
+                        <p class="card-desc">精美的鲍鱼菜肴摆盘摄影，展现食材与器皿的和谐搭配，提升用餐仪式感。</p>
+                        <span class="card-tag">摆盘设计</span>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/abalone5/400/300" alt="鲍鱼切片图片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">鲍鱼横切面</h3>
+                        <p class="card-desc">特写镜头展示鲍鱼横切面的纹理与肉质，清晰可见内部的肌理结构。</p>
+                        <span class="card-tag">细节特写</span>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/abalone6/400/300" alt="清蒸鲍鱼图片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">清蒸鲍鱼成品</h3>
+                        <p class="card-desc">清蒸做法保留鲍鱼原汁原味，色泽晶莹，肉质软糯，是经典的烹饪方式。</p>
+                        <span class="card-tag">烹饪成品</span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="info-list">
+                <h3>常见品种识别特征</h3>
+                <div class="info-item">
+                    <span class="info-label">产地：</span>
+                    <span class="info-value">主要分布于太平洋北部，包括中国、日本、朝鲜半岛及澳大利亚等地。</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">营养：</span>
+                    <span class="info-value">富含蛋白质、维生素A、E、钙、铁及多种氨基酸，具有滋阴补阳、提高免疫力功效。</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">选购：</span>
+                    <span class="info-value">优质鲍鱼体形完整，色泽黄褐或浅绿，肉质干燥有弹性，无异味。</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">使用条款</a>
+                <a href="#">隐私政策</a>
+                <a href="#">图片版权</a>
+                <a href="#">联系站长</a>
+            </div>
+            <p class="copyright">&copy; 2023 珍鲜图库 - 专注海鲜与美食视觉资源分享</p>
+        </div>
+    </footer>
+
+</body>
+</html>
